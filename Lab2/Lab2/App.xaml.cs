@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Plugin.Multilingual;
+using System;
+using System.Globalization;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,6 +11,8 @@ namespace Lab2
         public App()
         {
             InitializeComponent();
+            //Change localization
+            CrossMultilingual.Current.CurrentCultureInfo = new CultureInfo("fr");
 
             MainPage = new NavigationPage(new Lab2.MainPage());
         }

@@ -16,6 +16,10 @@ namespace Lab2
     {
         public ObservableCollection<Organization> OrgsList { get; set; }
         public Organization SelectedItem { get; set; }
+        public ICommand AddCommand { get; set; }
+        public ICommand UpdateCommand { get; set; }
+        public ICommand RemoveCommand { get; set; }
+        public ICommand DescriptionCommand { get; set; }
 
         public MainPage()
         {
@@ -40,43 +44,6 @@ namespace Lab2
                     Product = "Ice-Cream"
                 }
             };
-
-            var tb1 = new ToolbarItem()
-            {
-                Text = "Add new Organization",
-                Order = ToolbarItemOrder.Secondary,
-                Priority = 1
-            };
-            tb1.Clicked += Add_Clicked;
-
-            var tb2 = new ToolbarItem()
-            {
-                Text = "Update Organization",
-                Order = ToolbarItemOrder.Secondary,
-                Priority = 1
-            };
-            tb2.Clicked += Update_Clicked;
-
-            var tb3 = new ToolbarItem()
-            {
-                Text = "Remove Organization",
-                Order = ToolbarItemOrder.Secondary,
-                Priority = 1
-            };
-            tb3.Clicked += Remove_Clicked;
-
-            var tb4 = new ToolbarItem()
-            {
-                Text = "Description",
-                Order = ToolbarItemOrder.Secondary,
-                Priority = 1
-            };
-            tb4.Clicked += Show_Description;
-
-            ToolbarItems.Add(tb1);
-            ToolbarItems.Add(tb2);
-            ToolbarItems.Add(tb3);
-            ToolbarItems.Add(tb4);
 
             this.BindingContext = this;
         }

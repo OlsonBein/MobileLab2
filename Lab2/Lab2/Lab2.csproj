@@ -11,9 +11,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
     <PackageReference Include="Xam.Plugins.Messaging" Version="3.2.1" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.1.0" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="LocalizationResources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +32,14 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Description.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LocalizationResources\AppResources.fr.resx">
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LocalizationResources\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="UpdatePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
