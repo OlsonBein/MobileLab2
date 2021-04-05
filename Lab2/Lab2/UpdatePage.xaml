@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Lab2.Entities"
+             x:Class="Lab2.UpdatePage">
+    <ContentPage.BindingContext>
+        <local:Organization/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Label Text="Organization name:"/>
+            <Entry Text="{Binding OrgName}" FontSize="Large"/>
+
+            <Label Text="Organization number:"/>
+            <Label Text="{Binding OrgNumber}"/>
+
+            <Label Text="Manager name:"/>
+            <Entry Text="{Binding ManagerName}"/>
+
+            <Label Text="Phone Number:"/>
+            <Entry Text="{Binding PhoneNumber}"/>
+
+            <Label Text="Product:"/>
+            <Entry Text="{Binding Product}"/>
+            
+            <Button Text="Update" Clicked="UpdateButton_Clicked"/>
+            <Button Text="Back" Clicked="BackButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

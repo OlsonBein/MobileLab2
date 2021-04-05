@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Lab2.Entities"
+             x:Class="Lab2.Description">
+    <ContentPage.BindingContext>
+        <local:Organization/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Label Text="Organization name:"/>
+            <Label Text="{Binding OrgName}" FontSize="Large"/>
+            
+            <Label Text="Organization number:"/>
+            <Label Text="{Binding OrgNumber}"/>
+            
+            <Label Text="Manager name:"/>
+            <Label Text="{Binding ManagerName}" FontSize="Medium"/>
+            
+            <Label Text="Phone Number:"/>
+            <Label Text="{Binding PhoneNumber}" FontSize="Medium"/>
+
+            <Label Text="Product:"/>
+            <Label Text="{Binding Product}"/>
+            
+            <Button Text="Back" Clicked="BackButton_Click"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
