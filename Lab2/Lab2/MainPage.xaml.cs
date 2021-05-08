@@ -1,13 +1,8 @@
 ﻿using Lab2.Entities;
 using Plugin.Messaging;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace Lab2
@@ -16,10 +11,6 @@ namespace Lab2
     {
         public ObservableCollection<Organization> OrgsList { get; set; }
         public Organization SelectedItem { get; set; }
-        public ICommand AddCommand { get; set; }
-        public ICommand UpdateCommand { get; set; }
-        public ICommand RemoveCommand { get; set; }
-        public ICommand DescriptionCommand { get; set; }
 
         public MainPage()
         {

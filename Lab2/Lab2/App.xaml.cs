@@ -12,7 +12,7 @@ namespace Lab2
         {
             InitializeComponent();
             //Change localization
-            CrossMultilingual.Current.CurrentCultureInfo = new CultureInfo("fr");
+            //CrossMultilingual.Current.CurrentCultureInfo = new CultureInfo("fr");
 
             MainPage = new NavigationPage(new Lab2.MainPage());
         }

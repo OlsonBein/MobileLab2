@@ -9,20 +9,22 @@
         <ToolbarItem Text="{tr:Translate RemoveOrg}" Priority="3" Order="Secondary" Clicked="Remove_Clicked"/>
         <ToolbarItem Text="{tr:Translate Description}" Priority="4" Order="Secondary" Clicked="Show_Description"/>
     </ContentPage.ToolbarItems>
-    <StackLayout>
-        <ListView ItemsSource="{Binding OrgsList}" SeparatorColor="Red" RowHeight="50" ItemSelected="ListView_ItemSelected">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <ViewCell.View>
-                            <StackLayout>
-                                <Label Text="{Binding OrgName}" FontSize="Medium"/>
-                                <Label Text="{Binding ManagerName}"/>
-                            </StackLayout>
-                        </ViewCell.View>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <ListView ItemsSource="{Binding OrgsList}" SeparatorColor="Red" RowHeight="50" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout>
+                                    <Label Text="{Binding OrgName}" FontSize="Medium"/>
+                                    <Label Text="{Binding ManagerName}"/>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

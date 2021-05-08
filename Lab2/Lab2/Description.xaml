@@ -6,23 +6,25 @@
         <local:Organization/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="CenterAndExpand">
-            <Label Text="Organization name:"/>
-            <Label Text="{Binding OrgName}" FontSize="Large"/>
+        <ScrollView>
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Organization name:"/>
+                <Label Text="{Binding OrgName}" FontSize="Large"/>
             
-            <Label Text="Organization number:"/>
-            <Label Text="{Binding OrgNumber}"/>
+                <Label Text="Organization number:"/>
+                <Label Text="{Binding OrgNumber}"/>
             
-            <Label Text="Manager name:"/>
-            <Label Text="{Binding ManagerName}" FontSize="Medium"/>
+                <Label Text="Manager name:"/>
+                <Label Text="{Binding ManagerName}" FontSize="Medium"/>
             
-            <Label Text="Phone Number:"/>
-            <Label Text="{Binding PhoneNumber}" FontSize="Medium"/>
+                <Label Text="Phone Number:"/>
+                <Label Text="{Binding PhoneNumber}" FontSize="Medium"/>
 
-            <Label Text="Product:"/>
-            <Label Text="{Binding Product}"/>
+                <Label Text="Product:"/>
+                <Label Text="{Binding Product}"/>
             
-            <Button Text="Back" Clicked="BackButton_Click"/>
-        </StackLayout>
+                <Button Text="Back" Clicked="BackButton_Click"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

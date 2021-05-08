@@ -6,13 +6,15 @@
         <local:Organization/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Entry x:Name="orgNoEntry" Text="{Binding OrgNumber}" Placeholder="Organization number"/>
-            <Entry  x:Name="orgNameEntry" Text="{Binding OrgName}" Placeholder="Organization name"/>
-            <Entry  x:Name="managerNameEntry" Text="{Binding ManagerName}" Placeholder="Manager name"/>
-            <Entry  x:Name="phoneEntry" Text="{Binding PhoneNumber}" Placeholder="Phone number"/>
-            <Entry  x:Name="productEntry" Text="{Binding Product}" Placeholder="Product"/>
-            <Button Text="Add" Clicked="AddButton_Clicked"/>
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Entry x:Name="orgNoEntry" Text="{Binding OrgNumber}" Placeholder="Organization number"/>
+                <Entry  x:Name="orgNameEntry" Text="{Binding OrgName}" Placeholder="Organization name"/>
+                <Entry  x:Name="managerNameEntry" Text="{Binding ManagerName}" Placeholder="Manager name"/>
+                <Entry  x:Name="phoneEntry" Text="{Binding PhoneNumber}" Placeholder="Phone number"/>
+                <Entry  x:Name="productEntry" Text="{Binding Product}" Placeholder="Product"/>
+                <Button Text="Add" Clicked="AddButton_Clicked"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
